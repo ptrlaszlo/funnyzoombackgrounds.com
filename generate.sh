@@ -4,6 +4,7 @@ val pictures = List(
   ("ISS_cupola.jpg", "The ISS cupola", "https://twitter.com/AeroDork/status/1243354801225846784"),
   ("wright.jpg", "The Wright Flyer", "https://twitter.com/AeroDork/status/1243355008852062208"),
   ("c130.jpg", "C-130 off ramp", "https://twitter.com/AeroDork/status/1243355151185797120"),
+
   ("apollo-17.jpg", "Apollo 17", "https://twitter.com/AeroDork/status/1243355243347423237"),
   ("kim.jpg", "Rocket launch", "https://twitter.com/AeroDork/status/1243355334418157568"),
   ("hilton-lobby.jpg", "The Hilton lobby", "https://twitter.com/AeroDork/status/1243358086795915264")
@@ -49,7 +50,7 @@ pictures.grouped(3).foreach { rowPics =>
   <article class="tile is-child box">
     <p class="subtitle">$title</p>
     <figure class="image is-4by3">
-      <img src="assets/img/$img">
+      <a href="assets/img/$img"><img src="assets/img/$img"></a>
     </figure>
     <a class="is-pulled-right" href="$url" target="_blank">source</a>
   </article>
