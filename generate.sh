@@ -9,6 +9,10 @@ val pictures = List(
   ("office.jpg", "Office", "https://twitter.com/BeeShellll/status/1245030591386566656"),
   ("bbc.jpg", "BBC guy", "https://twitter.com/BDStanley/status/1245071576594350087"),
 
+  ("MKBHD.jpg", "MKBHD", "https://twitter.com/MKBHD/status/1245335109106098177"),
+  ("xp.jpg", "Windows XP", "https://wallpaperaccess.com/full/90278.jpg"),
+  ("south_park.jpg", "South Park", "https://twitter.com/shkathleen_/status/1245194689629782017"),
+
   ("club_penguin.jpg", "Club Penguin", "https://twitter.com/BeeShellll/status/1245030591386566656"),
   ("sponge.jpg", "Sponge Bob", "https://twitter.com/BeeShellll/status/1245030701994586113"),
   ("icarly.jpg", "iCarly's bedroom", "https://twitter.com/BeeShellll/status/1245030591386566656"),
