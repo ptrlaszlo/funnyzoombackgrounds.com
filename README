@@ -5,4 +5,4 @@ History:
 16:26 had first version up on with 6 images
 16:53 had 18 images
 
-TODO smaller images.
+sips -Z 640 *.jpg

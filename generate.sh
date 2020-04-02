@@ -66,7 +66,7 @@ pictures.grouped(3).foreach { rowPics =>
   <article class="tile is-child box">
     <p class="subtitle">$title</p>
     <figure class="image is-4by3">
-      <a href="assets/img/$img"><img src="assets/img/$img"></a>
+      <a href="assets/img/$img"><img src="assets/tumb/$img"></a>
     </figure>
     <a class="is-pulled-right is-size-7" href="$url" target="_blank">source</a>
   </article>
