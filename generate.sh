@@ -12,7 +12,7 @@ val pictures = List(
   ("xp.jpg", "Windows XP", "https://wallpaperaccess.com/full/90278.jpg"),
 
   ("south_park.jpg", "South Park", "https://twitter.com/shkathleen_/status/1245194689629782017"),
-  ("club_penguin.jpg", "Club Penguin", "https://twitter.com/BeeShellll/status/1245030591386566656"),
+  ("titanic.jpg", "Titanic", "https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/41/1507565852-titanic-1490202383.jpg"),
   ("sponge.jpg", "Sponge Bob", "https://twitter.com/BeeShellll/status/1245030701994586113"),
   ("icarly.jpg", "iCarly's bedroom", "https://twitter.com/BeeShellll/status/1245030591386566656"),
   
@@ -26,7 +26,18 @@ val pictures = List(
   ("apollo-17.jpg", "Apollo 17", "https://twitter.com/AeroDork/status/1243355243347423237"),
   ("kim.jpg", "Rocket launch", "https://twitter.com/AeroDork/status/1243355334418157568"),
 
-  // ("hilton-lobby.jpg", "The Hilton lobby", "https://twitter.com/AeroDork/status/1243358086795915264"),
+  ("hilton-lobby.jpg", "The Hilton lobby", "https://twitter.com/AeroDork/status/1243358086795915264"),
+  ("prison.jpg", "Prison", "https://twitter.com/RedEye_Sec/status/1245064421380104198"),
+  ("toystory.jpg", "Toy Story", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
+  ("insideout.jpg", "Inside Out", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
+
+  ("club_penguin.jpg", "Club Penguin", "https://twitter.com/BeeShellll/status/1245030591386566656"),
+  ("movieup.jpg", "UP", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
+  ("nemo.jpg", "Nemo", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
+  ("Westerlund2.jpg", "Westerlund 2", "https://cdn.spacetelescope.org/archives/images/screen/heic1509a.jpg"),
+
+
+
 )
 
 import java.io._
