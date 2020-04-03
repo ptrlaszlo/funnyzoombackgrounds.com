@@ -66,7 +66,7 @@ pictures.grouped(4).foreach { rowPics =>
     s"""
 <div class="tile is-parent">
   <article class="tile is-child box">
-    <p class="subtitle">$title</p>
+    <h2 class="subtitle">$title</h2>
     <figure class="image is-4by3">
       <a href="assets/img/$img"><img src="assets/tumb/$img"></a>
     </figure>

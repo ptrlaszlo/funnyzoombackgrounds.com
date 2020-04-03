@@ -6,6 +6,9 @@ Apr. 2
 16:26 had first version up on with 6 images
 16:53 had 18 images
 
+Apr. 3
+08:40 Added to search.google.com
+
 // sips -Z 640 *.jpg
 
 sips --resampleWidth 480 *.jpg
