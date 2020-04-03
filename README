@@ -1,10 +1,27 @@
 History:
 
+Apr. 2
 15:25 bought domain
 15:40 got basic empty site running
 16:26 had first version up on with 6 images
 16:53 had 18 images
 
-sips -Z 640 *.jpg
+// sips -Z 640 *.jpg
 
-even smaller thumbnails?
+sips --resampleWidth 480 *.jpg
+   Resample image to specified width.
+
+
+links to tiles
+google sitemap?
+
+
+18:20
+889
+543
+346
+
+19:20
+1,781
+1,167
+614

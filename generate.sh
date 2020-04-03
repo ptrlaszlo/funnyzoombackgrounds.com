@@ -4,15 +4,14 @@ val pictures = List(
   ("distracted.jpg", "Distracted Boyfriend Meme", "https://twitter.com/BeeShellll/status/1245030591386566656"),
   ("thisisfine.jpg", "This Is Fine Meme", "https://twitter.com/BeeShellll/status/1245030701994586113"),
   ("toilet_paper.jpg", "Toilet Paper", "https://twitter.com/BeeShellll/status/1245030825491562499"),
-  
   ("tiger_king.jpg", "The Tiger King", "https://twitter.com/BeeShellll/status/1245030825491562499"),
+
   ("office.jpg", "Office", "https://twitter.com/BeeShellll/status/1245030591386566656"),
   ("bbc.jpg", "BBC guy", "https://twitter.com/BDStanley/status/1245071576594350087"),
-
   ("MKBHD.jpg", "MKBHD", "https://twitter.com/MKBHD/status/1245335109106098177"),
   ("xp.jpg", "Windows XP", "https://wallpaperaccess.com/full/90278.jpg"),
-  ("south_park.jpg", "South Park", "https://twitter.com/shkathleen_/status/1245194689629782017"),
 
+  ("south_park.jpg", "South Park", "https://twitter.com/shkathleen_/status/1245194689629782017"),
   ("club_penguin.jpg", "Club Penguin", "https://twitter.com/BeeShellll/status/1245030591386566656"),
   ("sponge.jpg", "Sponge Bob", "https://twitter.com/BeeShellll/status/1245030701994586113"),
   ("icarly.jpg", "iCarly's bedroom", "https://twitter.com/BeeShellll/status/1245030591386566656"),
@@ -20,14 +19,14 @@ val pictures = List(
   ("phineas.jpg", "Phineas and Ferb", "https://twitter.com/BeeShellll/status/1245030701994586113"),
   ("monster_inc.jpg", "Monster Inc.", "https://twitter.com/BeeShellll/status/1245030825491562499"),
   ("friends.jpg", "Friends", "https://twitter.com/chanelizette/status/1245147224272588800"),
-
   ("ISS_cupola.jpg", "The ISS cupola", "https://twitter.com/AeroDork/status/1243354801225846784"),
+
   ("wright.jpg", "The Wright Flyer", "https://twitter.com/AeroDork/status/1243355008852062208"),
   ("c130.jpg", "C-130 off ramp", "https://twitter.com/AeroDork/status/1243355151185797120"),
-
   ("apollo-17.jpg", "Apollo 17", "https://twitter.com/AeroDork/status/1243355243347423237"),
   ("kim.jpg", "Rocket launch", "https://twitter.com/AeroDork/status/1243355334418157568"),
-  ("hilton-lobby.jpg", "The Hilton lobby", "https://twitter.com/AeroDork/status/1243358086795915264"),
+
+  // ("hilton-lobby.jpg", "The Hilton lobby", "https://twitter.com/AeroDork/status/1243358086795915264"),
 )
 
 import java.io._
@@ -41,7 +40,6 @@ pw.write("""
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Funny zoom backgrounds | funnyzoombackgrounds.com</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <style type="text/css">
       * {
         oxutline: 1px solid red;
@@ -63,7 +61,7 @@ pw.write("""
   <section class="section">
 """)
 
-pictures.grouped(3).foreach { rowPics =>
+pictures.grouped(4).foreach { rowPics =>
   val picsHtml = rowPics.map { case (img, title, url) =>
     s"""
 <div class="tile is-parent">
