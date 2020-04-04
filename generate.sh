@@ -35,52 +35,59 @@ val pictures = List(
   ("movieup.jpg", "UP", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
   ("nemo.jpg", "Nemo", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
   ("Westerlund2.jpg", "Westerlund 2", "https://cdn.spacetelescope.org/archives/images/screen/heic1509a.jpg"),
-
-
-
 )
 
-import java.io._
-val pw = new PrintWriter(new File("index.html"))
+val animated = List(
+  ("ship.mp4", "Ship", "https://www.reddit.com/r/zoombackgrounds/comments/fsihx3/zoom_background_video_for_difficult_meetings/"),
+  ("star_wars_1.mp4", "Star Wars", "https://www.reddit.com/r/zoombackgrounds/comments/ft52yp/heres_another_version_of_the_xwing_animated/"),
+  ("star_wars_2.mp4", "Star Wars", "https://www.reddit.com/r/zoombackgrounds/comments/ft150s/animated_xwing_cockpit_i_put_together_from_a/"),
+  ("man_eating.mp4", "Man eating", "https://www.reddit.com/r/zoombackgrounds/comments/fqp8ze/man_eating/"),
+) 
 
-pw.write("""
+def createHtml(name: String, picsPage: Boolean, items: List[(String, String, String)]) = {
+  import java.io._
+  val index = new PrintWriter(new File(name))
+  val title = if (picsPage) "Funny zoom backgrounds" else "Animated zoom backgrounds"
+  index.write(s"""
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Funny zoom backgrounds | funnyzoombackgrounds.com</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <style type="text/css">
-      * {
-        oxutline: 1px solid red;
-      }
-    </style>
-  </head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$title | funnyzoombackgrounds.com</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+</head>
   <body>
   <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Funny zoom backgrounds
-      </h1>
-      <p class="subtitle">
-        To make the meetings bearable
-      </p>
+    <div class="container has-text-centered" style="margin-bottom: 25px;">
+      <h1 class="title">$title</h1>
+      <h2 class="subtitle">To make the meetings bearable</h2>
     </div>
-  </section>
+    <div class="tabs is-centered">
+      <ul>
+        <li class="${if(picsPage) "is-active" else ""}">
+          <a href="/"><span class="icon is-small">🖼️</span><span class="is-size-5">Pictures</span></a>
+        </li>
+        <li class="${if(!picsPage) "is-active" else ""}">
+          <a href="animated.html"><span class="icon is-small">📹</span><span class="is-size-5">Animated</span></a>
+        </li>
+      </ul>
+    </div>
 
-  <section class="section">
 """)
 
-pictures.grouped(4).foreach { rowPics =>
+items.grouped(4).foreach { rowPics =>
   val picsHtml = rowPics.map { case (img, title, url) =>
+    val picContent = if (picsPage)
+      s"""<figure class="image is-4by3"><a href="assets/img/$img"><img src="assets/tumb/$img"></a></figure>"""
+    else
+      s"""<a href="assets/video/$img"><video src="assets/video/$img" autoplay loop></video></a>"""
+
     s"""
 <div class="tile is-parent">
   <article class="tile is-child box">
     <h2 class="subtitle">$title</h2>
-    <figure class="image is-4by3">
-      <a href="assets/img/$img"><img src="assets/tumb/$img"></a>
-    </figure>
+    $picContent
     <a class="is-pulled-right is-size-7" href="$url" target="_blank">source</a>
   </article>
 </div>
@@ -88,12 +95,12 @@ pictures.grouped(4).foreach { rowPics =>
   }
 
 
-  pw.write(s"""<div class="tile is-ancestor">${picsHtml.mkString("")}</div>""")
+  index.write(s"""<div class="tile is-ancestor">${picsHtml.mkString("")}</div>""")
 }
 
-pw.write("""</section>""")
+index.write("""</section>""")
 
-pw.write("""
+index.write("""
 <section class="section">
   <div class="container">
     <h2 class="title">Zoom Virtual backgrounds</h2>
@@ -109,6 +116,9 @@ pw.write("""
 </footer>
 """)
 
-pw.write("""</body></html>""")
+  index.write("""</body></html>""")
+  index.close
+}
 
-pw.close
+createHtml("index.html", picsPage = true, pictures)
+createHtml("animated.html", picsPage = false, animated)
