@@ -12,19 +12,13 @@ Apr. 3
 14:13 "funnyzoombackgrounds.com" google search returns the page
       "funny zoom backgrounds" not on first three pages
 
+Apr. 4
+16:00 added animations
+
 // sips -Z 640 *.jpg
 
 sips --resampleWidth 480 *.jpg
    Resample image to specified width.
 
 
-
-18:20
-889
-543
-346
-
-19:20
-1,781
-1,167
-614
+36.29 transferred

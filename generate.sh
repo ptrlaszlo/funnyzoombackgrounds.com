@@ -81,7 +81,7 @@ items.grouped(4).foreach { rowPics =>
     val picContent = if (picsPage)
       s"""<figure class="image is-4by3"><a href="assets/img/$img"><img src="assets/tumb/$img"></a></figure>"""
     else
-      s"""<a href="assets/video/$img"><video src="assets/video/$img" autoplay loop></video></a>"""
+      s"""<a href="assets/video/$img"><video src="assets/video/$img" controls preload="metadata" loop></video></a>"""
 
     s"""
 <div class="tile is-parent">
