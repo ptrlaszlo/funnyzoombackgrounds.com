@@ -15,10 +15,8 @@ Apr. 3
 Apr. 4
 16:00 added animations
 
-// sips -Z 640 *.jpg
-
+Resample image to specified width:
 sips --resampleWidth 480 *.jpg
-   Resample image to specified width.
 
-
-36.29 transferred
+Get first frame:
+ffmpeg -i man_eating.mp4 -vframes 1 man_eating.jpg

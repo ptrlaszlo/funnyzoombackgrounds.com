@@ -38,10 +38,10 @@ val pictures = List(
 )
 
 val animated = List(
-  ("ship.mp4", "Ship", "https://www.reddit.com/r/zoombackgrounds/comments/fsihx3/zoom_background_video_for_difficult_meetings/"),
-  ("star_wars_1.mp4", "Star Wars", "https://www.reddit.com/r/zoombackgrounds/comments/ft52yp/heres_another_version_of_the_xwing_animated/"),
-  ("star_wars_2.mp4", "Star Wars", "https://www.reddit.com/r/zoombackgrounds/comments/ft150s/animated_xwing_cockpit_i_put_together_from_a/"),
-  ("man_eating.mp4", "Man eating", "https://www.reddit.com/r/zoombackgrounds/comments/fqp8ze/man_eating/"),
+  ("ship", "Ship", "https://www.reddit.com/r/zoombackgrounds/comments/fsihx3/zoom_background_video_for_difficult_meetings/"),
+  ("star_wars_1", "Star Wars", "https://www.reddit.com/r/zoombackgrounds/comments/ft52yp/heres_another_version_of_the_xwing_animated/"),
+  ("star_wars_2", "Star Wars", "https://www.reddit.com/r/zoombackgrounds/comments/ft150s/animated_xwing_cockpit_i_put_together_from_a/"),
+  ("man_eating", "Man eating", "https://www.reddit.com/r/zoombackgrounds/comments/fqp8ze/man_eating/"),
 ) 
 
 def createHtml(name: String, picsPage: Boolean, items: List[(String, String, String)]) = {
@@ -81,7 +81,7 @@ items.grouped(4).foreach { rowPics =>
     val picContent = if (picsPage)
       s"""<figure class="image is-4by3"><a href="assets/img/$img"><img src="assets/tumb/$img"></a></figure>"""
     else
-      s"""<a href="assets/video/$img"><video src="assets/video/$img" controls preload="metadata" loop></video></a>"""
+      s"""<a href="assets/video/$img.mp4"><video src="assets/video/$img.mp4" poster="assets/video/$img.jpg" controls preload="metadata" loop></video></a>"""
 
     s"""
 <div class="tile is-parent">
