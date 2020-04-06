@@ -44,44 +44,47 @@ val animated = List(
   ("man_eating", "Man eating", "https://www.reddit.com/r/zoombackgrounds/comments/fqp8ze/man_eating/"),
 ) 
 
-def createHtml(name: String, picsPage: Boolean, items: List[(String, String, String)]) = {
+abstract class PageType(val page: String, val title: String, val items: List[(String, String, String)])
+case object Index extends PageType("index.html", "Funny zoom backgrounds", pictures)
+case object Animated extends PageType("animated.html", "Animated zoom backgrounds", animated)
+
+def createHtml(pageType: PageType) = {
   import java.io._
-  val index = new PrintWriter(new File(name))
-  val title = if (picsPage) "Funny zoom backgrounds" else "Animated zoom backgrounds"
+  val index = new PrintWriter(new File(pageType.page))
   index.write(s"""
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>$title | funnyzoombackgrounds.com</title>
+<title>${pageType.title} | funnyzoombackgrounds.com</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
 </head>
   <body>
   <section class="section">
     <div class="container has-text-centered" style="margin-bottom: 25px;">
-      <h1 class="title">$title</h1>
+      <h1 class="title">${pageType.title}</h1>
       <h4 class="subtitle">To make the meetings bearable</h4>
     </div>
     <div class="tabs is-centered">
       <ul>
-        <li class="${if(picsPage) "is-active" else ""}">
+        <li class="${if(pageType == Index) "is-active" else ""}">
           <a href="/"><span class="icon is-small">🖼️</span><h2 class="is-size-5">Pictures</h2></a>
         </li>
-        <li class="${if(!picsPage) "is-active" else ""}">
-          <a href="animated.html"><span class="icon is-small">📹</span><h2 class="is-size-5">Animated</h2></a>
+        <li class="${if(pageType == Animated) "is-active" else ""}">
+          <a href="${Animated.page}"><span class="icon is-small">📹</span><h2 class="is-size-5">Animated</h2></a>
         </li>
       </ul>
     </div>
 
 """)
 
-items.grouped(4).foreach { rowPics =>
+pageType.items.grouped(4).foreach { rowPics =>
   val picsHtml = rowPics.map { case (img, title, url) =>
-    val picContent = if (picsPage)
-      s"""<figure class="image is-4by3"><a href="assets/img/$img"><img src="assets/tumb/$img"></a></figure>"""
-    else
-      s"""<a href="assets/video/$img.mp4"><video src="assets/video/$img.mp4" poster="assets/video/$img.jpg" controls preload="metadata" loop></video></a>"""
+    val picContent = pageType match {
+      case Animated => s"""<a href="assets/video/$img.mp4"><video src="assets/video/$img.mp4" poster="assets/video/$img.jpg" controls preload="metadata" loop></video></a>"""
+      case _ => s"""<figure class="image is-4by3"><a href="assets/img/$img"><img src="assets/tumb/$img"></a></figure>"""
+    }
 
     s"""
 <div class="tile is-parent">
@@ -120,5 +123,5 @@ index.write("""
   index.close
 }
 
-createHtml("index.html", picsPage = true, pictures)
-createHtml("animated.html", picsPage = false, animated)
+createHtml(Index)
+createHtml(Animated)
