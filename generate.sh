@@ -61,15 +61,15 @@ def createHtml(name: String, picsPage: Boolean, items: List[(String, String, Str
   <section class="section">
     <div class="container has-text-centered" style="margin-bottom: 25px;">
       <h1 class="title">$title</h1>
-      <h2 class="subtitle">To make the meetings bearable</h2>
+      <h4 class="subtitle">To make the meetings bearable</h4>
     </div>
     <div class="tabs is-centered">
       <ul>
         <li class="${if(picsPage) "is-active" else ""}">
-          <a href="/"><span class="icon is-small">🖼️</span><span class="is-size-5">Pictures</span></a>
+          <a href="/"><span class="icon is-small">🖼️</span><h2 class="is-size-5">Pictures</h2></a>
         </li>
         <li class="${if(!picsPage) "is-active" else ""}">
-          <a href="animated.html"><span class="icon is-small">📹</span><span class="is-size-5">Animated</span></a>
+          <a href="animated.html"><span class="icon is-small">📹</span><h2 class="is-size-5">Animated</h2></a>
         </li>
       </ul>
     </div>
@@ -86,7 +86,7 @@ items.grouped(4).foreach { rowPics =>
     s"""
 <div class="tile is-parent">
   <article class="tile is-child box">
-    <h2 class="subtitle">$title</h2>
+    <h3 class="subtitle">$title</h3>
     $picContent
     <a class="is-pulled-right is-size-7" href="$url" target="_blank">source</a>
   </article>
