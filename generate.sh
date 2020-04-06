@@ -6,35 +6,20 @@ val pictures = List(
   ("toilet_paper.jpg", "Toilet Paper", "https://twitter.com/BeeShellll/status/1245030825491562499"),
   ("tiger_king.jpg", "The Tiger King", "https://twitter.com/BeeShellll/status/1245030825491562499"),
 
-  ("office.jpg", "Office", "https://twitter.com/BeeShellll/status/1245030591386566656"),
   ("bbc.jpg", "BBC guy", "https://twitter.com/BDStanley/status/1245071576594350087"),
   ("MKBHD.jpg", "MKBHD", "https://twitter.com/MKBHD/status/1245335109106098177"),
-  ("xp.jpg", "Windows XP", "https://wallpaperaccess.com/full/90278.jpg"),
-
-  ("south_park.jpg", "South Park", "https://twitter.com/shkathleen_/status/1245194689629782017"),
-  ("titanic.jpg", "Titanic", "https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/41/1507565852-titanic-1490202383.jpg"),
-  ("sponge.jpg", "Sponge Bob", "https://twitter.com/BeeShellll/status/1245030701994586113"),
-  ("icarly.jpg", "iCarly's bedroom", "https://twitter.com/BeeShellll/status/1245030591386566656"),
-  
-  ("phineas.jpg", "Phineas and Ferb", "https://twitter.com/BeeShellll/status/1245030701994586113"),
-  ("monster_inc.jpg", "Monster Inc.", "https://twitter.com/BeeShellll/status/1245030825491562499"),
-  ("friends.jpg", "Friends", "https://twitter.com/chanelizette/status/1245147224272588800"),
+  ("xp.jpg", "Windows XP", "https://wallpaperaccess.com/full/90278.jpg"),  
   ("ISS_cupola.jpg", "The ISS cupola", "https://twitter.com/AeroDork/status/1243354801225846784"),
-
+  
   ("wright.jpg", "The Wright Flyer", "https://twitter.com/AeroDork/status/1243355008852062208"),
   ("c130.jpg", "C-130 off ramp", "https://twitter.com/AeroDork/status/1243355151185797120"),
   ("apollo-17.jpg", "Apollo 17", "https://twitter.com/AeroDork/status/1243355243347423237"),
   ("kim.jpg", "Rocket launch", "https://twitter.com/AeroDork/status/1243355334418157568"),
-
-  ("hilton-lobby.jpg", "The Hilton lobby", "https://twitter.com/AeroDork/status/1243358086795915264"),
+  
   ("prison.jpg", "Prison", "https://twitter.com/RedEye_Sec/status/1245064421380104198"),
-  ("toystory.jpg", "Toy Story", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
-  ("insideout.jpg", "Inside Out", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
-
-  ("club_penguin.jpg", "Club Penguin", "https://twitter.com/BeeShellll/status/1245030591386566656"),
-  ("movieup.jpg", "UP", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
-  ("nemo.jpg", "Nemo", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
   ("Westerlund2.jpg", "Westerlund 2", "https://cdn.spacetelescope.org/archives/images/screen/heic1509a.jpg"),
+  ("mugshot.jpg", "Mugshot", "https://www.reddit.com/r/zoombackgrounds/comments/fu98tb/mugshot/"),
+  ("ladycat.jpg", "Lady yelling at the cat", "https://www.reddit.com/r/zoombackgrounds/comments/fu9mbc/lady_yelling_at_the_cat/"),
 )
 
 val animated = List(
@@ -42,11 +27,34 @@ val animated = List(
   ("star_wars_1", "Star Wars", "https://www.reddit.com/r/zoombackgrounds/comments/ft52yp/heres_another_version_of_the_xwing_animated/"),
   ("star_wars_2", "Star Wars", "https://www.reddit.com/r/zoombackgrounds/comments/ft150s/animated_xwing_cockpit_i_put_together_from_a/"),
   ("man_eating", "Man eating", "https://www.reddit.com/r/zoombackgrounds/comments/fqp8ze/man_eating/"),
-) 
+)
+
+val movies = List(
+  ("office.jpg", "Office", "https://twitter.com/BeeShellll/status/1245030591386566656"),
+  ("south_park.jpg", "South Park", "https://twitter.com/shkathleen_/status/1245194689629782017"),
+  ("titanic.jpg", "Titanic", "https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/41/1507565852-titanic-1490202383.jpg"),
+  ("sponge.jpg", "Sponge Bob", "https://twitter.com/BeeShellll/status/1245030701994586113"),
+ 
+  ("icarly.jpg", "iCarly's bedroom", "https://twitter.com/BeeShellll/status/1245030591386566656"), 
+  ("phineas.jpg", "Phineas and Ferb", "https://twitter.com/BeeShellll/status/1245030701994586113"),
+  ("monster_inc.jpg", "Monster Inc.", "https://twitter.com/BeeShellll/status/1245030825491562499"),
+  ("friends.jpg", "Friends", "https://twitter.com/chanelizette/status/1245147224272588800"),
+
+  ("hilton-lobby.jpg", "The Hilton lobby", "https://twitter.com/AeroDork/status/1243358086795915264"),
+  ("toystory.jpg", "Toy Story", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
+  ("insideout.jpg", "Inside Out", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
+  ("club_penguin.jpg", "Club Penguin", "https://twitter.com/BeeShellll/status/1245030591386566656"),
+  
+  ("movieup.jpg", "UP", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
+  ("nemo.jpg", "Nemo", "https://twitter.com/desdemipersiana/status/1245191276011696130"),
+  ("azkaban.jpg", "Azkaban", "https://www.reddit.com/r/zoombackgrounds/comments/fumcrh/front_page_of_the_daily_prophet/"),
+  ("bobross.jpg", "Bob Ross painting set", "https://www.reddit.com/r/zoombackgrounds/comments/fu9kna/bob_ross_painting_set/"),
+)
 
 abstract class PageType(val page: String, val title: String, val items: List[(String, String, String)])
 case object Index extends PageType("index.html", "Funny zoom backgrounds", pictures)
 case object Animated extends PageType("animated.html", "Animated zoom backgrounds", animated)
+case object Movies extends PageType("movies.html", "Funny zoom backgrounds", movies)
 
 def createHtml(pageType: PageType) = {
   import java.io._
@@ -73,6 +81,9 @@ def createHtml(pageType: PageType) = {
         </li>
         <li class="${if(pageType == Animated) "is-active" else ""}">
           <a href="${Animated.page}"><span class="icon is-small">📹</span><h2 class="is-size-5">Animated</h2></a>
+        </li>
+        <li class="${if(pageType == Movies) "is-active" else ""}">
+          <a href="${Movies.page}"><span class="icon is-small">🎬</span><h2 class="is-size-5">Movies / Cartoons</h2></a>
         </li>
       </ul>
     </div>
@@ -125,3 +136,4 @@ index.write("""
 
 createHtml(Index)
 createHtml(Animated)
+createHtml(Movies)
