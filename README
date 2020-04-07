@@ -15,6 +15,9 @@ Apr. 3
 Apr. 4
 16:00 added animations
 
+Apr. 6
+18:00 added movies
+
 Resample image to specified width:
 sips --resampleWidth 480 *.jpg
 
