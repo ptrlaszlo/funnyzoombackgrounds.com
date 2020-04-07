@@ -72,6 +72,7 @@ def createHtml(pageType: PageType) = {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${pageType.title} | funnyzoombackgrounds.com</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+<link rel="shortcut icon" href="assets/favicon.ico">
 <style>
   @media screen and (max-width: 768px) {
     .tabs ul {
