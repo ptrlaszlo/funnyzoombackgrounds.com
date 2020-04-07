@@ -67,6 +67,14 @@ def createHtml(pageType: PageType) = {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${pageType.title} | funnyzoombackgrounds.com</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+<style>
+  @media screen and (max-width: 768px) {
+    .tabs ul {
+      flex-direction: column;
+      li { width: 100%; }
+    }
+  }
+</style>
 </head>
   <body>
   <section class="section">
