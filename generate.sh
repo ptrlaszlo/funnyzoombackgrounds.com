@@ -23,10 +23,15 @@ val pictures = List(
 )
 
 val animated = List(
-  ("ship", "Ship", "https://www.reddit.com/r/zoombackgrounds/comments/fsihx3/zoom_background_video_for_difficult_meetings/"),
+  ("rollercoaster", "Rollercoaster", "https://www.reddit.com/r/zoombackgrounds/comments/fw2nza/rollercoaster_background/"),
   ("star_wars_1", "Star Wars", "https://www.reddit.com/r/zoombackgrounds/comments/ft52yp/heres_another_version_of_the_xwing_animated/"),
   ("star_wars_2", "Star Wars", "https://www.reddit.com/r/zoombackgrounds/comments/ft150s/animated_xwing_cockpit_i_put_together_from_a/"),
+  ("star_wars_3", "Star Wars", "https://www.reddit.com/r/zoombackgrounds/comments/fvfna1/star_wars_xwing_chased_by_tie_fighter/"),
+  
   ("man_eating", "Man eating", "https://www.reddit.com/r/zoombackgrounds/comments/fqp8ze/man_eating/"),
+  ("neon", "Neon Rooftops", "https://www.reddit.com/r/zoombackgrounds/comments/ftppgz/neon_rooftops_looping/"),
+  ("ship", "Ship", "https://www.reddit.com/r/zoombackgrounds/comments/fsihx3/zoom_background_video_for_difficult_meetings/"),
+  ("ship_2", "Boat", "https://www.reddit.com/r/zoombackgrounds/comments/ft7lzp/i_made_this_clip_from_a_youtube_video_and_used_it/"),
 )
 
 val movies = List(
