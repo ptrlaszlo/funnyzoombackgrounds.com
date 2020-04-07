@@ -78,25 +78,28 @@ def createHtml(pageType: PageType) = {
 </head>
   <body>
   <section class="section">
-    <div class="container has-text-centered" style="margin-bottom: 25px;">
-      <h1 class="title">${pageType.title}</h1>
-      <h4 class="subtitle">To make the meetings bearable</h4>
-    </div>
-    <div class="tabs is-centered">
-      <ul>
-        <li class="${if(pageType == Index) "is-active" else ""}">
-          <a href="/"><span class="icon is-small">🖼️</span><h2 class="is-size-5">Pictures</h2></a>
-        </li>
-        <li class="${if(pageType == Animated) "is-active" else ""}">
-          <a href="${Animated.page}"><span class="icon is-small">📹</span><h2 class="is-size-5">Animated</h2></a>
-        </li>
-        <li class="${if(pageType == Movies) "is-active" else ""}">
-          <a href="${Movies.page}"><span class="icon is-small">🎬</span><h2 class="is-size-5">Movies / Cartoons</h2></a>
-        </li>
-      </ul>
-    </div>
-
+  <div class="container has-text-centered" style="margin-bottom: 25px;">
+    <h1 class="title">${pageType.title}</h1>
+    <h4 class="subtitle">To make the meetings bearable</h4>
+  </div>
 """)
+
+val menu = s"""
+<div class="tabs is-centered">
+<ul>
+  <li class="${if(pageType == Index) "is-active" else ""}">
+    <a href="/"><span class="icon is-small">🖼️</span><h2 class="is-size-5">Pictures</h2></a>
+  </li>
+  <li class="${if(pageType == Animated) "is-active" else ""}">
+    <a href="${Animated.page}"><span class="icon is-small">📹</span><h2 class="is-size-5">Animated</h2></a>
+  </li>
+  <li class="${if(pageType == Movies) "is-active" else ""}">
+    <a href="${Movies.page}"><span class="icon is-small">🎬</span><h2 class="is-size-5">Movies / Cartoons</h2></a>
+  </li>
+</ul>
+</div>"""
+
+index.write(menu)
 
 pageType.items.grouped(4).foreach { rowPics =>
   val picsHtml = rowPics.map { case (img, title, url) =>
@@ -119,6 +122,8 @@ pageType.items.grouped(4).foreach { rowPics =>
 
   index.write(s"""<div class="tile is-ancestor">${picsHtml.mkString("")}</div>""")
 }
+
+index.write(menu)
 
 index.write("""</section>""")
 
