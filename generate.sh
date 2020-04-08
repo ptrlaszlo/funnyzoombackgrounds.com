@@ -120,9 +120,9 @@ pageType.items.grouped(4).foreach { rowPics =>
     }
 
     s"""
-<div class="tile is-parent">
+<div class="tile is-parent" id="$img">
   <article class="tile is-child box">
-    <h3 class="subtitle">$title</h3>
+    <h3 class="subtitle"><a href="#$img">$title</a></h3>
     $picContent
     <a class="is-pulled-right is-size-7" href="$url" target="_blank">source</a>
   </article>
