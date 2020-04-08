@@ -115,8 +115,13 @@ index.write(menu)
 pageType.items.grouped(4).foreach { rowPics =>
   val picsHtml = rowPics.map { case (img, title, url) =>
     val picContent = pageType match {
-      case Animated => s"""<a href="assets/video/$img.mp4"><video src="assets/video/$img.mp4" poster="assets/video/$img.jpg" controls preload="metadata" loop></video></a>"""
-      case _ => s"""<figure class="image is-4by3"><a href="assets/img/$img"><img src="assets/tumb/$img"></a></figure>"""
+      case Animated => s"""<video src="assets/video/$img.mp4" poster="assets/video/$img.jpg" controls preload="metadata" loop></video>"""
+      case _ => s"""<figure class="image is-4by3"><img src="assets/tumb/$img"></figure>"""
+    }
+
+    val downloadLink = pageType match {
+      case Animated => s"assets/video/$img.mp4"
+      case _ => s"assets/img/$img"
     }
 
     s"""
@@ -124,7 +129,8 @@ pageType.items.grouped(4).foreach { rowPics =>
   <article class="tile is-child box">
     <h3 class="subtitle"><a href="#$img">$title</a></h3>
     $picContent
-    <a class="is-pulled-right is-size-7" href="$url" target="_blank">source</a>
+    <a class="is-pulled-right is-size-7" href="$url" target="_blank">&nbsp;source</a>
+    <a class="is-pulled-right is-size-7" href="$downloadLink" target="_blank">download&nbsp;</a>
   </article>
 </div>
     """
