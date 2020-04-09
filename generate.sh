@@ -2,15 +2,20 @@
 
 val pictures = List(
   ("distracted.jpg", "Distracted Boyfriend Meme", "https://twitter.com/BeeShellll/status/1245030591386566656"),
+  ("distracted_girlfriend.jpg", "Distracted Girlfriend Meme", "https://www.reddit.com/r/zoombackgrounds/comments/fu9kfa/distracted_girlfriend/"),
   ("thisisfine.jpg", "This Is Fine Meme", "https://twitter.com/BeeShellll/status/1245030701994586113"),
-  ("toilet_paper.jpg", "Toilet Paper", "https://twitter.com/BeeShellll/status/1245030825491562499"),
   ("tiger_king.jpg", "The Tiger King", "https://twitter.com/BeeShellll/status/1245030825491562499"),
-
-  ("bbc.jpg", "BBC guy", "https://twitter.com/BDStanley/status/1245071576594350087"),
+  
+  ("bbc.jpg", "BBC guy", "https://www.reddit.com/r/zoombackgrounds/comments/ftklsi/bbc_news_videobomb/"),
   ("MKBHD.jpg", "MKBHD", "https://twitter.com/MKBHD/status/1245335109106098177"),
   ("xp.jpg", "Windows XP", "https://wallpaperaccess.com/full/90278.jpg"),  
-  ("ISS_cupola.jpg", "The ISS cupola", "https://twitter.com/AeroDork/status/1243354801225846784"),
+  ("toilet_paper.jpg", "Toilet Paper", "https://twitter.com/BeeShellll/status/1245030825491562499"),
   
+  ("ISS_cupola.jpg", "The ISS cupola", "https://twitter.com/AeroDork/status/1243354801225846784"),
+  ("casino.jpg", "Casino", "https://www.reddit.com/r/zoombackgrounds/comments/fx8clr/casino/"),
+  ("backvan.jpg", "Back of a van", "https://www.reddit.com/r/zoombackgrounds/comments/fx86d2/in_the_back_of_a_van/"),
+  ("stripclub.jpg", "Strip club", "https://www.reddit.com/r/zoombackgrounds/comments/fxkbrn/strip_club/"),
+
   ("wright.jpg", "The Wright Flyer", "https://twitter.com/AeroDork/status/1243355008852062208"),
   ("c130.jpg", "C-130 off ramp", "https://twitter.com/AeroDork/status/1243355151185797120"),
   ("apollo-17.jpg", "Apollo 17", "https://twitter.com/AeroDork/status/1243355243347423237"),
