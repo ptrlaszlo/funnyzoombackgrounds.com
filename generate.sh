@@ -37,6 +37,11 @@ val animated = List(
   ("neon", "Neon Rooftops", "https://www.reddit.com/r/zoombackgrounds/comments/ftppgz/neon_rooftops_looping/"),
   ("ship", "Ship", "https://www.reddit.com/r/zoombackgrounds/comments/fsihx3/zoom_background_video_for_difficult_meetings/"),
   ("ship_2", "Boat", "https://www.reddit.com/r/zoombackgrounds/comments/ft7lzp/i_made_this_clip_from_a_youtube_video_and_used_it/"),
+
+  ("backseat", "Backseat", "https://www.reddit.com/r/zoombackgrounds/comments/g1jbo2/backseat/"),
+  ("bbcvideo", "BBC", "https://www.reddit.com/r/zoombackgrounds/comments/fy7lbl/children_interrupt_bbc_news_interview_as_close_as/"),
+  ("cowboy", "Screaming Cowboy", "https://www.reddit.com/r/zoombackgrounds/comments/fzqz1r/screaming_cowboy_loop/"),
+  ("nevergonna", "Never Gonna Give You Up", "https://www.reddit.com/r/zoombackgrounds/comments/fxpl55/never_gonna_give_you_up_video_background/"),
   
   ("starman", "Starman", "https://www.youtube.com/watch?v=aBr2kKAHN6M"),
   ("fire", "Fire", "https://www.reddit.com/r/Cinemagraphs/comments/frrgjl/burning_down_the_house/"),
