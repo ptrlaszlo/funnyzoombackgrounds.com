@@ -47,6 +47,12 @@ val animated = List(
   ("fire", "Fire", "https://www.reddit.com/r/Cinemagraphs/comments/frrgjl/burning_down_the_house/"),
   ("train", "Train", "https://www.reddit.com/r/Cinemagraphs/comments/fvgjqo/snowy_trainspotting/"),
   ("matrix", "The Matrix", "https://www.reddit.com/r/Cinemagraphs/comments/85ipdp/neos_epiphany_the_matrix_1999/"),
+
+  ("breakfastclub", "Breakfast Club", "https://www.reddit.com/r/zoombackgrounds/comments/g62now/breakfast_club_detention_dance/"),
+  ("forrest", "Forrest Gump", "http://itaiinselberg.com/zoom/Forrest_get_more_at_heygreat.fun_.mp4"),
+  ("officespace", "Office Space", "https://www.reddit.com/r/zoombackgrounds/comments/g6vovc/office_space_loop_lumbergh_drinking_coffee/"),
+  ("mario", "Super Mario Bros.", "https://www.reddit.com/r/zoombackgrounds/comments/g65z4p/super_mario_bros_stage/"),
+
 )
 
 val movies = List(
